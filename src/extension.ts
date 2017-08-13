@@ -53,22 +53,38 @@ class PeekFileDefinitionProvider implements vscode.DefinitionProvider {
 
   searchFilePath(fileName: String): Thenable<vscode.Uri[]> {
     return vscode.workspace.findFiles(`**/${fileName}.vue`, '**/node_modules'); // Returns promise
-    // 
   }
 
-  provideDefinition(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken) {
+  preparePaths(asd) {
+    
+  }
+
+  provideDefinition(
+    document: vscode.TextDocument,
+    position: vscode.Position,
+    token: vscode.CancellationToken): vscode.Definition[] | any {
+    let filePaths = [];
     const componentNames = this.getComponentName(position);
     const searchPathActions = componentNames.map(this.searchFilePath);
     const searchPromises = Promise.all(searchPathActions); // pass array of promises
-    let possiblePaths = [];
-    searchPromises.then(paths => {
-      possiblePaths = [].concat.apply([], paths);
-      if (possiblePaths.length) {
-        return possiblePaths;
-        // return new vscode.Location(vscode.Uri.file(filePath),new vscode.Position(0,1) );
-      } else {
-        return undefined;
+      let all = [];
+      all.push(new vscode.Location(vscode.Uri.file('/home/duri/projects/tips2/src/pages/Home.vue'),new vscode.Position(0,1) ))
+      all.push(new vscode.Location(vscode.Uri.file('home/duri/projects/tips2/src/blocks/na/sdf/Home.vue'),new vscode.Position(0,1) ))
+    return all;
+    /* searchPromises.then(paths => {
+      filePaths = [].concat.apply([], paths);
+      
+      if (filePaths.length) {
+        // return new vscode.Location(vscode.Uri.file(filePaths[0].path), new vscode.Position(0,1) );
+        filePaths.forEach(filePath => {
+          console.log(filePath.path)
+          return new vscode.Location(vscode.Uri.file('/home/duri/projects/tips2/src/pages/Home.vue'),new vscode.Position(0,1) );
+        })
       }
-    });
+      return undefined;
+    }, (reason) => {
+      
+      return undefined;
+    }); */
   }
 }
