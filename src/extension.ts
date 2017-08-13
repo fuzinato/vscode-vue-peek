@@ -55,36 +55,31 @@ class PeekFileDefinitionProvider implements vscode.DefinitionProvider {
     return vscode.workspace.findFiles(`**/${fileName}.vue`, '**/node_modules'); // Returns promise
   }
 
-  preparePaths(asd) {
-    
-  }
-
   provideDefinition(
     document: vscode.TextDocument,
     position: vscode.Position,
-    token: vscode.CancellationToken): vscode.Definition[] | any {
+    token: vscode.CancellationToken
+  ): Promise<vscode.Location | vscode.Location[]> {
+    
     let filePaths = [];
     const componentNames = this.getComponentName(position);
     const searchPathActions = componentNames.map(this.searchFilePath);
     const searchPromises = Promise.all(searchPathActions); // pass array of promises
-      let all = [];
-      all.push(new vscode.Location(vscode.Uri.file('/home/duri/projects/tips2/src/pages/Home.vue'),new vscode.Position(0,1) ))
-      all.push(new vscode.Location(vscode.Uri.file('home/duri/projects/tips2/src/blocks/na/sdf/Home.vue'),new vscode.Position(0,1) ))
-    return all;
-    /* searchPromises.then(paths => {
+    
+    return searchPromises.then((paths) => {
       filePaths = [].concat.apply([], paths);
       
       if (filePaths.length) {
-        // return new vscode.Location(vscode.Uri.file(filePaths[0].path), new vscode.Position(0,1) );
+        let allPaths = [];
         filePaths.forEach(filePath => {
-          console.log(filePath.path)
-          return new vscode.Location(vscode.Uri.file('/home/duri/projects/tips2/src/pages/Home.vue'),new vscode.Position(0,1) );
-        })
+          allPaths.push(new vscode.Location(vscode.Uri.file(`${filePath.path}`),new vscode.Position(0,1) ))
+        });
+        return allPaths;
+      } else {
+        return undefined;
       }
-      return undefined;
     }, (reason) => {
-      
       return undefined;
-    }); */
+    }); 
   }
 }
