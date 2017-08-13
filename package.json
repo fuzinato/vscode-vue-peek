@@ -21,8 +21,7 @@
         "vue-peek.supportedLanguages": {
           "type": "array",
           "default": [
-            "vue",
-            "javascript"
+            "vue"
           ],
           "items": {
             "type": "string"
@@ -32,8 +31,7 @@
         "vue-peek.targetFileExtensions": {
           "type": "array",
           "default": [
-            ".vue",
-            ".js"
+            ".vue"
           ],
           "items": {
             "type": "string"
