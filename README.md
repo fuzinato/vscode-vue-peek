@@ -1,5 +1,6 @@
 # vscode-vue-peek
 [![Version](https://vsmarketplacebadge.apphb.com/version/dariofuzinato.vue-peek.svg)](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek)
+[![Build Status](https://travis-ci.org/fussinatto/vscode-vue-peek.svg?branch=master)](https://travis-ci.org/fussinatto/vscode-vue-peek)
 
 This extension extends Vue code editing with `Go To Definition` and `Peek Definition` support for components and filenames in single-file components with a *`.vue`* extension.
 It allows quickly jumping to or peeking into files that are referenced as components (from template), or as module imports (from script). 
