@@ -3,7 +3,7 @@
   "displayName": "Vue Peek",
   "description": "Allows peek and goto definition for Vue single-file components.",
   "version": "1.0.0",
-  "publisher": "Dario Fuzinato",
+  "publisher": "dariofuzinato",
   "icon": "images/vue-peek-icon.png",
   "license": "MIT",
   "keywords": [
@@ -12,7 +12,13 @@
     "definition",
     "file"
   ],
-  "homepage": "https://github.com/fussinatto/vscode-vue-peek",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fussinatto/vscode-vue-peek"
+  },
+  "bugs": {
+    "url": "https://github.com/fussinatto/vscode-vue-peek/issues"
+  },
   "engines": {
     "vscode": "^1.14.0"
   },
