@@ -1,9 +1,18 @@
 {
   "name": "vue-peek",
-  "displayName": "vue-peek",
-  "description": "Allows peek and goto definition for nested Vue components.",
+  "displayName": "Vue Peek",
+  "description": "Allows peek and goto definition for Vue single-file components.",
   "version": "1.0.0",
   "publisher": "Dario Fuzinato",
+  "icon": "images/vue-peek-icon.png",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "peek",
+    "definition",
+    "file"
+  ],
+  "homepage": "https://github.com/fussinatto/vscode-vue-peek",
   "engines": {
     "vscode": "^1.14.0"
   },
