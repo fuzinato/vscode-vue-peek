@@ -1,65 +1,32 @@
-# vue-peek README
+# vscode-vue-peek
 
-This is the README for your extension "vue-peek". After writing up a brief description, we recommend including the following sections.
+This extension extends Vue code editing with `Go To Definition` and `Peek Definition` support for components and filenames in single-file components with a *`.vue`* extension.
+It allows quickly jumping to or peeking into files that are referenced as components (from template), or as module imports (from script). 
+![Demo](images/vue-peek-demo.gif)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The extension supports all the normal capabilities of symbol definition tracking, but does it for css selectors (classes and IDs). This includes:
 
-For example if there is an image subfolder under your extension project workspace:
+ * Peek: load the css file inline and make quick edits right there. (`Ctrl+Shift+F12`)
+ * Go To: jump directly to the css file or open it in a new editor (`F12`)
+ * Hover: show the definition in a hover over the symbol (`Ctrl+hover`)
 
-\!\[feature X\]\(images/feature-x.png\)
+See editor docs for more details
+ * [Visual Studio Code: Goto Definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition)
+ * [Visual Studio Code: Peek](https://code.visualstudio.com/docs/editor/editingevolved#_peek)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Contributing
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Contributions and suggestions are greatly appreciated.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+  * Initial release
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+### Thanks
+Inspired by [vscode file peek](https://github.com/abierbaum/vscode-file-peek)
 
 **Enjoy!**

@@ -17,6 +17,9 @@ export function activate(context: vscode.ExtensionContext) {
     new PeekFileDefinitionProvider(targetFileExtensions)
   ));
 
+  /* Provides way to get selected text even if there is dash
+   * ( must have fot retrieving component name )
+   */
   context.subscriptions.push(vscode.languages.setLanguageConfiguration(
     'vue',
     languageConfiguration)

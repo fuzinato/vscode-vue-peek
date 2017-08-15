@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 export default class PeekFileDefinitionProvider implements vscode.DefinitionProvider {
-  protected targetFileExtensions: string[] = [];
+  targetFileExtensions: string[] = [];
 
   constructor(targetFileExtensions: string[] = []) {
     this.targetFileExtensions = targetFileExtensions;
