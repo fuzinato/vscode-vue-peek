@@ -2,7 +2,7 @@
   "name": "vue-peek",
   "displayName": "Vue Peek",
   "description": "Allows peek and goto definition for Vue single-file components.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "dariofuzinato",
   "icon": "images/vue-peek-icon.png",
   "license": "MIT",
