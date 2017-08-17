@@ -24,6 +24,10 @@ Contributions and suggestions are greatly appreciated.
 
 ## Release Notes
 
+### 1.0.1
+
+  * Fixes #1: referencing `component/index.vue` files
+
 ### 1.0.0
 
   * Initial release
