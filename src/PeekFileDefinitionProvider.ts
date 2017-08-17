@@ -20,7 +20,9 @@ export default class PeekFileDefinitionProvider implements vscode.DefinitionProv
 
     this.targetFileExtensions.forEach(ext => {
       possibleFileNames.push(selectedText + ext)
+      possibleFileNames.push(selectedText + '/index.vue')
       possibleFileNames.push(altName + ext)
+      possibleFileNames.push(altName + '/index.vue')
     })
 
     return possibleFileNames;
@@ -37,7 +39,7 @@ export default class PeekFileDefinitionProvider implements vscode.DefinitionProv
   ): Promise<vscode.Location | vscode.Location[]> {
     
     let filePaths = [];
-    const componentNames = this.getComponentName(position, );
+    const componentNames = this.getComponentName(position);
     const searchPathActions = componentNames.map(this.searchFilePath);
     const searchPromises = Promise.all(searchPathActions); // pass array of promises
     
