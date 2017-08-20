@@ -24,6 +24,11 @@ Contributions and suggestions are greatly appreciated.
 
 ## Release Notes
 
+### 1.0.2
+
+  * Add config title
+  * Add variable extension to `component/index` files
+
 ### 1.0.1
 
   * Fixes #1: referencing `component/index.vue` files
