@@ -32,6 +32,7 @@
   "contributes": {
     "commands": [],
     "configuration": {
+      "title": "Vue Peek extension configuration",
       "properties": {
         "vue-peek.supportedLanguages": {
           "type": "array",

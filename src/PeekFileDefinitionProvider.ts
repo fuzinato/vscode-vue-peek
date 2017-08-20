@@ -20,9 +20,9 @@ export default class PeekFileDefinitionProvider implements vscode.DefinitionProv
 
     this.targetFileExtensions.forEach(ext => {
       possibleFileNames.push(selectedText + ext)
-      possibleFileNames.push(selectedText + '/index.vue')
+      possibleFileNames.push(selectedText + '/index' + ext)
       possibleFileNames.push(altName + ext)
-      possibleFileNames.push(altName + '/index.vue')
+      possibleFileNames.push(altName + '/index' + ext)
     })
 
     return possibleFileNames;
