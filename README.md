@@ -14,9 +14,18 @@ The extension supports all the normal capabilities of symbol definition tracking
  * Go To: jump directly to the css file or open it in a new editor (`F12`)
  * Hover: show the definition in a hover over the symbol (`Ctrl+hover`)
 
-See editor docs for more details
- * [Visual Studio Code: Goto Definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition)
- * [Visual Studio Code: Peek](https://code.visualstudio.com/docs/editor/editingevolved#_peek)
+## Customize supported languages
+There are 2 settings options that allows you to customize targeted files and language in which plugin is activated. By default they look like this:
+```
+ "vue-peek.targetFileExtensions": [
+    ".vue",
+  ],
+  "vue-peek.supportedLanguages": [
+    "vue"
+  ]
+```
+You can add support for any file extension you like. Go to settings, search for _vue-peek_ and add **.js** extension to _targetFileExtensions_ option. This way the plugin will also search .js files.
+If you'd like for plugin to be activated in other languages, add "js" to _supportedLanguages_ array.
 
 ## Contributing
 
