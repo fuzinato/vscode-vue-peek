@@ -24,8 +24,8 @@ There are 2 settings options that allows you to customize targeted files and lan
     "vue"
   ]
 ```
-You can add support for any file extension you like. Go to settings, search for _vue-peek_ and add **.js** extension to _targetFileExtensions_ option. This way the plugin will also search .js files.
-If you'd like for plugin to be activated in other languages, add "js" to _supportedLanguages_ array.
+You can add support for any file extension you like. To allow plugin to search for **.js** files: go to settings, search for _vue-peek_ and add **.js** extension to _targetFileExtensions_ option.
+If you'd like for plugin to be activated in other languages, add that extension (i.e. "js") to _supportedLanguages_ array.
 
 ## Contributing
 
